@@ -1,5 +1,9 @@
 import Link from "next/link";
 
+export const metadata = {
+  title:'Tienda oficial dinamica'
+}
+
 export default function TiendaLayout({ children }) {
   return (
     <>
