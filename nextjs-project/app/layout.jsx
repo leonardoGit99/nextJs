@@ -1,5 +1,5 @@
-
 import Navbar from "@/components/Navbar";
+import { Poppins } from "next/font/google";
 
 export const metadata = {
   title: "Mi tienda con Nextjs",
@@ -7,10 +7,16 @@ export const metadata = {
   keywords: 'tienda nextjs'
 };
 
+const poppins = Poppins({
+  weight:["300", "400", "500", "700"],
+  styles: ["italic", "normal"],
+  subsets:["latin"]
+})
+
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className={poppins.className}>
         <Navbar />
         {children}
       </body>
