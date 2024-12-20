@@ -1,5 +1,6 @@
 import Navbar from "@/components/Navbar";
 import { Poppins } from "next/font/google";
+import './globals.css'
 
 export const metadata = {
   title: "Mi tienda con Nextjs",
