@@ -1,5 +1,5 @@
 import { Suspense } from "react";
-import Posts from "@/app/posts/page";
+import Posts from "@/src/app/posts/page";
 
 async function loadPost(id) {
   const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${id}`);
@@ -8,12 +8,11 @@ async function loadPost(id) {
   return data
 }
 
-export default async function Post({ params }) {
-  const post = await loadPost(params.id);
-
+async function Post({ id }) {
+  const post = await loadPost(id);
   return (
     <div>
-      <h1>Post {params.id} {post.title}</h1>
+      <h1>Post {id} {post.title}</h1>
       <p>{post.body}</p>
 
       <h2>Otras publicaciones</h2>
@@ -21,5 +20,7 @@ export default async function Post({ params }) {
         <Posts />
       </Suspense>
     </div>
-  );
+  )
 }
+
+export default Post

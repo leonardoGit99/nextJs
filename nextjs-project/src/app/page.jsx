@@ -1,4 +1,4 @@
-import Users from "@/components/Users";
+import Users from "@/src/components/Users";
 
 export default function App() {
   return (

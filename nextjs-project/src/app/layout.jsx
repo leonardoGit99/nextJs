@@ -1,4 +1,4 @@
-import Navbar from "@/components/Navbar";
+import Navbar from "@/src/components/Navbar";
 import { Poppins } from "next/font/google";
 import './globals.css'
 

@@ -1,4 +1,6 @@
-export default function Tienda() {
+
+
+function Tienda() {
   return (
     <div>
       Tienda
@@ -6,5 +8,7 @@ export default function Tienda() {
         <li>Product 1</li>
       </ul>
     </div>
-  );
+  )
 }
+
+export default Tienda
